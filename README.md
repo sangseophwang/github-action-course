@@ -91,3 +91,24 @@ GITHUB_ACTION: 현재 실행중인 Action ID
 - Job을 넘어서 다른 Job에 데이터 전달
   - Runner가 다르기 때문에 기본적으로는 전달 불가
   - Artifact와 같은 다른 기능을 사용하거나, 외부 스토리지를 활용하는 형태로 가능
+
+## 조건 및 연산자
+- Expression
+  - 특정 구문을 프로그래밍 형태로 설정하여 결과 활용
+  - `${{ expression }}`
+- Condition & Operator
+  - 조건식 if 키워드를 활용
+  - `if: github.repository == 'xxxxx/github-action-course'`
+- Functions
+  - 조건식 if와 함께 다양한 기본 함수 사용 가능
+  - 예시
+    - contains
+    - startsWith
+    - endsWith
+    - format: 특정 포맷의 string 값을 변수로 변경
+    - join: Array 배열의 문자열 값을 연결
+- Status check functions
+  - success()
+  - failures()
+  - canceled()
+  - always()

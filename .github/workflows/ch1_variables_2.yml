@@ -3,7 +3,7 @@ name: PART3 - CH1 - Variables 2
 on: workflow_dispatch
 
 env:
-  GITHUB_ACTOR: "RyanSong"
+  GITHUB_ACTOR: "SangSeopHwang"
 
 jobs:
   build_1:

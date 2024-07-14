@@ -1,6 +1,7 @@
 # github-action-course
 
-### Github Action?
+## Github Action
+### 정의
 - Github에서 제공하는 CI/CD DevOps 파이프라인 자동화 플랫폼
 - 소프트웨어 개발 및 배포 과정 자동화를 목적으로 제공되는 서비스
 
@@ -28,7 +29,8 @@
     - 이슈 라벨링 자동화를 통해 프로젝트 관리 운영 자동화 적용
 
 
-### Workflow?
+## Workflow
+### 정의
 - 이벤트 발생 시 어떤 행위를 할 것인가에 대한 작업 정의
 
 ### Workflow 세부 내역
@@ -38,3 +40,18 @@
     - 작업별 별도의 공간에서 실행. 작업 공간에 대한 정의
 - 스텝(Step)
     - 작업 내 개별 실제 수행되는 액션에 대한 정의
+
+## Variables
+### 정의
+- Workflow 파일에서 사용되는 동적인 값
+- 보다 유연한 워크플로 사용을 가능케 하며, 주로 환경 변수, 시크릿 값을 저장하고 접근할 때 사용
+- Job 또는 Workflow 단계에서 실행되는 명령은 변수를 만들고 읽고 수정할 수 있음
+
+### Variables 생성 방식
+- Workflow 파일에 env 키로 정의하여, 단일 Workflow에서 정의하는 방식
+  - env 키 위치에 따라 변수 적용 범위(scope)가 달라짐
+- Github Organization 또는 Repository에서 정의하는 방식
+
+### Default Variables
+- Github에서 내부적으로 관리 중인 기본 환경 변수
+- Prefix로 GITHUB_* 또는 RUNNER_* 로 설정된 네이밍 사용

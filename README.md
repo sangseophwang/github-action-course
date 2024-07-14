@@ -52,6 +52,7 @@
   - env 키 위치에 따라 변수 적용 범위(scope)가 달라짐
 - Github Organization 또는 Repository에서 정의하는 방식
   - Settings → Security → Secrets and variables → Actions
+  - 변수 접근 키로 `vars` 사용
 
 ### Default Variables
 - Github에서 내부적으로 관리 중인 기본 환경 변수

@@ -51,6 +51,7 @@
 - Workflow 파일에 env 키로 정의하여, 단일 Workflow에서 정의하는 방식
   - env 키 위치에 따라 변수 적용 범위(scope)가 달라짐
 - Github Organization 또는 Repository에서 정의하는 방식
+  - Settings → Security → Secrets and variables → Actions
 
 ### Default Variables
 - Github에서 내부적으로 관리 중인 기본 환경 변수

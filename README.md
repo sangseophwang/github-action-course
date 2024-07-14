@@ -55,3 +55,12 @@
 ### Default Variables
 - Github에서 내부적으로 관리 중인 기본 환경 변수
 - Prefix로 GITHUB_* 또는 RUNNER_* 로 설정된 네이밍 사용
+
+### Default Variables 예시
+GITHUB_ACTION: 현재 실행중인 Action ID
+- GITHUB_ACTION_PATH: 현재 실행중인 Action 경로
+- GITHUB_ENV: 러너 내 변수 설정 파일 경로
+- GITHUB_EVENT_NAME: 워크플로우를 트리거한 이벤트 이름
+- GITHUB_WORKFLOW: 워크플로우 이름
+- RUNNER_ARCH: Runner의 architecture(X86, ARM, ARM64..)
+- RUNNER_OS: Runner의 운영체제(Linux, Windows, macOS)

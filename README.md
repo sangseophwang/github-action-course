@@ -79,3 +79,15 @@ GITHUB_ACTION: 현재 실행중인 Action ID
 - GITHUB_WORKFLOW: 워크플로우 이름
 - RUNNER_ARCH: Runner의 architecture(X86, ARM, ARM64..)
 - RUNNER_OS: Runner의 운영체제(Linux, Windows, macOS)
+
+### 작업(Job) 데이터 활용
+- Step 간 데이터 전달
+  - 워크플로의 경우 작업 단위로 수행
+  - 작업 내 여러 개의 Step이 있으며, 각 Step은 정의된 고유의 작업을 실행하는 형태
+  - `$GITHUB_OUTPUT` 을 활용해 전달 가능
+  - `key=value` 형태로 `$GITHUB_OUTPUT` 에 기록
+    - `echo "random_id=$RANDOM" >> "$GITHUB_OUTPUT"`
+  - `steps.<step_id>.outputs.<key>` 로 데이터 접근
+- Job을 넘어서 다른 Job에 데이터 전달
+  - Runner가 다르기 때문에 기본적으로는 전달 불가
+  - Artifact와 같은 다른 기능을 사용하거나, 외부 스토리지를 활용하는 형태로 가능

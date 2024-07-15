@@ -90,7 +90,7 @@ GITHUB_ACTION: 현재 실행중인 Action ID
   - `steps.<step_id>.outputs.<key>` 로 데이터 접근
 - Job을 넘어서 다른 Job에 데이터 전달
   - Runner가 다르기 때문에 기본적으로는 전달 불가
-  - Artifact와 같은 다른 기능을 사용하거나, 외부 스토리지를 활용하는 형태로 가능
+  - - Artifact와 같은 다른 기능을 사용하거나, 외부 스토리지를 활용하는 형태로 가능
 
 ## 조건 및 연산자
 - Expression

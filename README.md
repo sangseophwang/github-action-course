@@ -49,6 +49,15 @@
 - 스텝(Step)
     - 작업 내 개별 실제 수행되는 액션에 대한 정의
 
+### Workflow Trigger
+- 워크플로우를 실행하게 하는 이벤트
+- 트리거를 어떻게 설정하느냐에 따라 워크플로 실행 조건을 다르게 구성
+- 종류
+  - 워크플로가 위치한 Repository에서 발생한 이벤트
+  - Repository 외 관련 서비스에서 발생한 이벤트
+  - 예약된 시간에 트리거 발생
+  - 수동으로 직접 이벤트 트리거 발생
+
 ## Variables
 ### 정의
 - Workflow 파일에서 사용되는 동적인 값
@@ -80,7 +89,7 @@
 - Prefix로 GITHUB_* 또는 RUNNER_* 로 설정된 네이밍 사용
 
 ### Default Variables 예시
-GITHUB_ACTION: 현재 실행중인 Action ID
+- GITHUB_ACTION: 현재 실행중인 Action ID
 - GITHUB_ACTION_PATH: 현재 실행중인 Action 경로
 - GITHUB_ENV: 러너 내 변수 설정 파일 경로
 - GITHUB_EVENT_NAME: 워크플로우를 트리거한 이벤트 이름

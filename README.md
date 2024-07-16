@@ -32,8 +32,16 @@
 ## Workflow
 ### 정의
 - 이벤트 발생 시 어떤 행위를 할 것인가에 대한 작업 정의
+- 자동화 작업의 가장 상위 개념으로, 하나 이상의 Job을 실행시키는 자동화 구성
+- Github Repository 내 `.github/workflows` 디렉토리에 YAML 파일 단위로 정의
+- Repository에서 발생되는 이벤트(커밋 추가, 이슈 생성 등)가 발생할 때 자동 실행
 
 ### Workflow 세부 내역
+- name
+  - 워크플로우의 이름. UI 상 워크플로우 이름 표시
+- on
+  - 워크플로우 실행을 위한 트리거 정의
+  - workflow_dispatch는 사용자에 의한 수동 트리거
 - 작업(Job)
     - 워크플로우 내 작동하는 작업 단위
 - 작업기(Runner)

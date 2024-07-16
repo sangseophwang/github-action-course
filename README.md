@@ -32,14 +32,31 @@
 ## Workflow
 ### 정의
 - 이벤트 발생 시 어떤 행위를 할 것인가에 대한 작업 정의
+- 자동화 작업의 가장 상위 개념으로, 하나 이상의 Job을 실행시키는 자동화 구성
+- Github Repository 내 `.github/workflows` 디렉토리에 YAML 파일 단위로 정의
+- Repository에서 발생되는 이벤트(커밋 추가, 이슈 생성 등)가 발생할 때 자동 실행
 
 ### Workflow 세부 내역
+- name
+  - 워크플로우의 이름. UI 상 워크플로우 이름 표시
+- on
+  - 워크플로우 실행을 위한 트리거 정의
+  - workflow_dispatch는 사용자에 의한 수동 트리거
 - 작업(Job)
     - 워크플로우 내 작동하는 작업 단위
 - 작업기(Runner)
     - 작업별 별도의 공간에서 실행. 작업 공간에 대한 정의
 - 스텝(Step)
     - 작업 내 개별 실제 수행되는 액션에 대한 정의
+
+### Workflow Trigger
+- 워크플로우를 실행하게 하는 이벤트
+- 트리거를 어떻게 설정하느냐에 따라 워크플로 실행 조건을 다르게 구성
+- 종류
+  - 워크플로가 위치한 Repository에서 발생한 이벤트
+  - Repository 외 관련 서비스에서 발생한 이벤트
+  - 예약된 시간에 트리거 발생
+  - 수동으로 직접 이벤트 트리거 발생
 
 ## Variables
 ### 정의
@@ -72,7 +89,7 @@
 - Prefix로 GITHUB_* 또는 RUNNER_* 로 설정된 네이밍 사용
 
 ### Default Variables 예시
-GITHUB_ACTION: 현재 실행중인 Action ID
+- GITHUB_ACTION: 현재 실행중인 Action ID
 - GITHUB_ACTION_PATH: 현재 실행중인 Action 경로
 - GITHUB_ENV: 러너 내 변수 설정 파일 경로
 - GITHUB_EVENT_NAME: 워크플로우를 트리거한 이벤트 이름

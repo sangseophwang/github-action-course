@@ -57,6 +57,11 @@
   - Repository 외 관련 서비스에서 발생한 이벤트
   - 예약된 시간에 트리거 발생
   - 수동으로 직접 이벤트 트리거 발생
+- 예시
+  - push
+  - pull_request
+  - workflow_run
+    - 워크플로우가 다른 워크플로우를 트리거하는 형태
 
 ## Variables
 ### 정의
